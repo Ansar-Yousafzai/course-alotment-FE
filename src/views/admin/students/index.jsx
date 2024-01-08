@@ -1,12 +1,10 @@
-// Chakra imports
 import { Box, SimpleGrid } from "@chakra-ui/react";
-import CheckTable from "views/admin/dataTables/components/CheckTable";
-import { columnsDataCheck } from "views/admin/dataTables/variables/columnsData";
-import tableDataCheck from "views/admin/dataTables/variables/tableDataCheck.json";
+import CheckTable from "views/admin/students/components/CheckTable";
+import { columnsDataCheck } from "views/admin/students/variables/columnsData";
+import tableDataCheck from "views/admin/students/variables/tableDataCheck.json";
 import React from "react";
 
-export default function Settings() {
-  // Chakra Color Mode
+export default function Students() {
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <SimpleGrid

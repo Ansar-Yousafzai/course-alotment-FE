@@ -1,44 +1,65 @@
 import React from "react";
 
 import { Icon } from "@chakra-ui/react";
-import { MdBarChart, MdPerson, MdHome, MdLock } from "react-icons/md";
+import {
+  MdDashboard,
+  MdOutlineSchool,
+  MdOutlineTableChart,
+  MdBugReport,
+  MdCoPresent,
+} from "react-icons/md";
 
 // Admin Imports
 import MainDashboard from "views/admin/dashboard";
-import Profile from "views/admin/profile";
-import DataTables from "views/admin/dataTables";
-
-// Auth Imports
-import SignInCentered from "views/auth/signIn";
+import TeachersTable from "views/admin/teachers";
+import StudentsTable from "views/admin/students";
+import ClassesTable from "views/admin/classes";
+import ReportsTable from "views/admin/reports";
 
 const routes = [
   {
     name: "Dashboard",
     layout: "/admin",
     path: "/dashboard",
-    icon: <Icon as={MdHome} width="20px" height="20px" color="inherit" />,
+    icon: <Icon as={MdDashboard} width="20px" height="20px" color="inherit" />,
     component: MainDashboard,
   },
   {
-    name: "Data Tables",
+    name: "Teachers",
     layout: "/admin",
-    icon: <Icon as={MdBarChart} width="20px" height="20px" color="inherit" />,
-    path: "/data-tables",
-    component: DataTables,
+    icon: <Icon as={MdCoPresent} width="20px" height="20px" color="inherit" />,
+    path: "/teachers",
+    component: TeachersTable,
   },
   {
-    name: "Profile",
+    name: "Students",
     layout: "/admin",
-    path: "/profile",
-    icon: <Icon as={MdPerson} width="20px" height="20px" color="inherit" />,
-    component: Profile,
+    icon: (
+      <Icon as={MdOutlineSchool} width="20px" height="20px" color="inherit" />
+    ),
+    path: "/students",
+    component: StudentsTable,
   },
   {
-    name: "Sign In",
-    layout: "/auth",
-    path: "/sign-in",
-    icon: <Icon as={MdLock} width="20px" height="20px" color="inherit" />,
-    component: SignInCentered,
+    name: "Classes",
+    layout: "/admin",
+    icon: (
+      <Icon
+        as={MdOutlineTableChart}
+        width="20px"
+        height="20px"
+        color="inherit"
+      />
+    ),
+    path: "/classes",
+    component: ClassesTable,
+  },
+  {
+    name: "Reports",
+    layout: "/admin",
+    icon: <Icon as={MdBugReport} width="20px" height="20px" color="inherit" />,
+    path: "/reports",
+    component: ReportsTable,
   },
 ];
 
