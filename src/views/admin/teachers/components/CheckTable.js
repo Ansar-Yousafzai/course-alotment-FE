@@ -65,7 +65,7 @@ export default function CheckTable(props) {
           fontWeight="700"
           lineHeight="100%"
         >
-          Check Table
+          All Teachers
         </Text>
         <Menu />
       </Flex>
